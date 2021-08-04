@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/stardomsolutions/tomcat-java-webapp.git'
+                // git 'https://github.com/stardomsolutions/tomcat-java-webapp.git'
 
                 sh "mvn clean package"
             }
