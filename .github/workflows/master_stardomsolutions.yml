@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'stardomsolutions'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5BE5B4AD57E04968987D65F67BCC1EC0 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0F348BCB41D04720A9311E35FE5B4C6A }}
           package: '*.war'
