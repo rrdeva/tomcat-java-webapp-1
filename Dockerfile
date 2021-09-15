@@ -1,4 +1,4 @@
-FROM tomcat:9
+FROM tomcat:7
 MAINTAINER StardomSolutions
 COPY target/demo.war /usr/local/tomcat/webapps/
 EXPOSE 8080
