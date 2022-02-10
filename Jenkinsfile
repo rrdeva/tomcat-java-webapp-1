@@ -25,17 +25,5 @@ pipeline {
 				sh "ssh -o StrictHostKeyChecking=no  vagrant@192.168.56.103 sudo systemctl restart tomcat"
 			}
 		}
-		stage('DeployToStagingEnv') {
-			steps {
-				sh "scp -o StrictHostKeyChecking=no  /var/lib/jenkins/workspace/demo-app-build/target/demo.war vagrant@192.168.56.104:/opt/tomcat/webapps/"
-				sh "ssh -o StrictHostKeyChecking=no  vagrant@192.168.56.104 sudo systemctl restart tomcat"
-			}
-		}
-		stage('DeployToProdEnv') {
-			steps {
-				sh "scp -o StrictHostKeyChecking=no  /var/lib/jenkins/workspace/demo-app-build/target/demo.war vagrant@192.168.56.105:/opt/tomcat/webapps/"
-				sh "ssh -o StrictHostKeyChecking=no  vagrant@192.168.56.105 sudo systemctl restart tomcat"
-			}
-		}
     }
 }
