@@ -2,15 +2,14 @@ pipeline {
     agent any
 
     tools {
-        maven "maven35"
+        maven "maven3"
     }
 
     stages {
         stage('Build') {
             steps {
-                // git 'https://github.com/stardomsolutions/tomcat-java-webapp.git'
 
-                sh "mvn clean package"
+                sh "mvn clean package -Dsonar.host.url=http://192.168.56.102:9000"
             }
         }
 		stage('DeployToDevEnv') {
