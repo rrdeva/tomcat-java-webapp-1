@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
 
-                sh "mvn clean package -Dsonar.host.url=http://192.168.56.102:9000"
+                sh "mvn clean package sonar:sonar -Dsonar.host.url=http://192.168.56.102:9000"
             }
         }
 		stage('DeployToDevEnv') {
