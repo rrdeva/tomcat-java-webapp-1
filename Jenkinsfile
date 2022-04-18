@@ -4,3 +4,4 @@ pipeline {
     tools {
         maven "Maven9"
     }
+    }
